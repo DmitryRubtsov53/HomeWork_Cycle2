@@ -44,7 +44,7 @@ public class Main {
         System.out.println("Задание 1 - За сколько можно накопить 12 млн ");
         {
             double total = 15_000;
-            double rate = 0.17;
+            double rate = 0.07;
             for (int i = 1; total <= 12_000_00; i++) {
                 total = total + (total * rate);
                 System.out.println("Месяц " + i + " , сумма накоплений " + Math.round(total) + " руб.");
@@ -54,23 +54,25 @@ public class Main {
         System.out.println("Задание 2 - Дополнение 1 к Задаче 1 - выводить только каждфй 6 месяц ");
         {
             double total = 15_000;
-            double rate = 0.17;
+            double rate = 0.07;   // % по вкладу в месяц
             for (int i = 1; total <= 12_000_00; i++) {
                 total = total + (total * rate);
-                if (i % 6 == 0)
-                { System.out.println("Месяц " + i + " , сумма накоплений " + Math.round(total) + " руб."); }
+                if (i % 6 == 0) {
+                    System.out.println("Месяц " + i + " , сумма накоплений " + Math.round(total) + " руб.");
+                }
             }
         }
         System.out.println(" ");
         System.out.println("Задание 3 - Дополнение 2 к Задаче 1 - выводить каждфй 6 месяц в течении 9 лет. ");
         {
             double total = 15_000;
-            double rate = 0.17;
+            double rate = 0.07; // % по вкладу в месяц
             int month_9year = 12 * 9;
-            for (int i = 1; i <= month_9year ; i++) {
+            for (int i = 1; i <= month_9year; i++) {
                 total = total + (total * rate);
-                if (i % 6 == 0)
-                { System.out.println("Месяц " + i + " , сумма накоплений " + Math.round(total) + " руб."); }
+                if (i % 6 == 0) {
+                    System.out.println("Месяц " + i + " , сумма накоплений " + Math.round(total) + " руб.");
+                }
             }
         }
         System.out.println(" ");
@@ -82,9 +84,26 @@ public class Main {
         }
         System.out.println(" ");
         System.out.println("Домашнее задание 3 ***************************************");
-
-
-
+        System.out.println(" ");
+        System.out.println("Задание 1 - Года пролёта кометы. ");
+        {
+        int period = 79;
+        int p = 0; // переменная, сохраняющая текущее значение пересчета годов прилёта кометы
+        int yearNow = 2022;
+        while (p <= yearNow) {
+           p = p + period;
+           if (p >= (yearNow - 200) && p <= (yearNow + 100))
+               System.out.println(p);
+            }
+        }
+        System.out.println(" ");
+        System.out.println("Задание 2 - Таблица умножения на 2. ");
+        int multiple = 2;  // дежурный множетель ТУ
+        int result;
+        for (int i = 1; i <= 10; i++) {
+            result = i * multiple;
+            System.out.println(i + " * " + multiple + " = " + result);
+        }
 
     }
 }
